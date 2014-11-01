@@ -5,11 +5,11 @@ http = require('http')
 fs = require('fs')
 
 themes =
-	'politics': 5
-	'culture': 2
+	'politics': 6
+	'culture': 3
 	'health': 3
 	'society': 3
-	'economy': 3
+	'economy': 4
 	'sport': 1
 	'education': 3
 	'free-speech-debate': 2
@@ -18,7 +18,7 @@ themes =
 	'science': 2
 	'environment': 2
 	'law': 4
-	'international': 5
+	'international': 6
 
 titleRe = new RegExp("<title>(.*?)</title>")
 
