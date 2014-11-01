@@ -25,8 +25,8 @@ titleRe = new RegExp("<title>(.*?)</title>")
 # queue = []
 
 execCall = (theme) ->
-	if not fs.existsSync theme
-		fs.mkdirSync theme
+	if not fs.existsSync "./digest/" + theme
+		fs.mkdirSync "./digest/" + theme
 
 	for page in [0...themes[theme]]
 		url = "http://idebate.org/debatabase/themes/#{theme}?page=#{page}"
@@ -77,5 +77,8 @@ execCall = (theme) ->
 												if err then console.log err.message
 												# cb()
 
+if not fs.existsSync "digest"
+	fs.mkdirSync "digest"
+												
 for theme of themes
 	execCall(theme)
